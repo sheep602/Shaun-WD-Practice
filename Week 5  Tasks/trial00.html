@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Column Layout with Bootstrap</title>
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <style>
+    
+    .spinner-btn { width: 150px; }
+    .progress-bar-custom { height: 20px; }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-primary spinner-btn" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Loading...
+      </button>
+
+
+      <div class="mt-4">
+        <h5>Image are below this text.</h5>
+        <div class="row">
+    
+          <div class="col-md-4 mb-3">
+            <div class="position-relative">
+              <img src="https://t4.ftcdn.net/jpg/05/85/80/01/360_F_585800164_y7T6DimEn1Ke3pkJpoyu1Jxqv7oPs53v.jpg" class="img-fluid" alt="Image 1">
+              <span class="position-absolute top-0 start-0 badge bg-success">Success</span>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="position-relative">
+              <img src="https://media.gq.com/photos/59ee10b166e2d56abcd79fd3/16:9/w_2560%2Cc_limit/gq-fitness-boxing.jpg" class="img-fluid" alt="Image 2">
+              <span class="position-absolute top-0 start-0 badge bg-warning">Warning</span>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="position-relative">
+              <img src="data:image/jpeg;base64,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" class="img-fluid" alt="Image 3">
+              <span class="position-absolute top-0 start-0 badge bg-info">Info</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <p>pictures are above my finger.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h5>Task Progress</h5>
+
+      <div class="mb-3">
+        <label for="progress1" class="form-label">Task 1 - Completed</label>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="progress2" class="form-label">Task 2 - In Progress</label>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="progress3" class="form-label">Task 3 - Pending</label>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
